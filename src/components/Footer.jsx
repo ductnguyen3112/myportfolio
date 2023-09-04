@@ -40,7 +40,7 @@ const Footer = () => {
           </li>
           <li className="menu__item">
             <a className="menu__link" href="/">
-              About
+              My Story
             </a>
           </li>
           <li className="menu__item">
@@ -50,16 +50,21 @@ const Footer = () => {
           </li>
           <li className="menu__item">
             <a className="menu__link" href="/">
-              Team
+              Resume
             </a>
           </li>
           <li className="menu__item">
             <a className="menu__link" href="/">
-              Contact
+              Education
+            </a>
+          </li>
+          <li className="menu__item">
+            <a className="menu__link" href="/">
+              Contact Me
             </a>
           </li>
         </ul>
-        <p>&copy;2023 Duc Thinh Nguyen | All Rights Reserved</p>
+        <p>&copy;Duc Thinh Nguyen | All Rights Reserved</p>
       </footer>
     </div>
   );

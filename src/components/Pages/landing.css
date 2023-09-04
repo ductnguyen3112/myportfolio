@@ -1,14 +1,12 @@
 body {
-    background-color: #ffffffa2; /* Fallback color */
-    background-blend-mode: overlay;
-    background-image: url("../images/bg-02-free-img.png"); /* Replace with the path to your image */
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: right top;
-    margin: 0;
-  }
-
-  
+  background-color: #ffffffa2; /* Fallback color */
+  background-blend-mode: overlay;
+  background-image: url("../images/bg-02-free-img.png"); /* Replace with the path to your image */
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right top;
+  margin: 0;
+}
 
 .intro-avatar-container {
   display: flex;
@@ -16,38 +14,33 @@ body {
   align-items: center;
   padding: 20px;
   margin-top: 100px;
-
 }
 
 .name-wrapper {
-    margin: 100px;
-   
+  margin: 100px;
 }
 
 .name-wrapper h2 {
   font-size: 40px;
-  font-family: 'Roboto Slab', serif;
-  
+  font-family: "Roboto Slab", serif;
 }
 
 .name-wrapper h1 {
   font-size: 70px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 }
 
 .name-wrapper h3 {
-    font-size: 20px;
-    color: grey;
-    font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  color: grey;
+  font-family: "Outfit", sans-serif;
+}
 
-  }
-
-  .name-wrapper h3 span {
-    text-decoration: underline; /* Add the underline */
-    text-decoration-color: grey; /* Set the color of the underline */
-    text-underline-offset: 20px; /* Adjust the spacing between text and underline */
-  }
-  
+.name-wrapper h3 span {
+  text-decoration: underline; /* Add the underline */
+  text-decoration-color: grey; /* Set the color of the underline */
+  text-underline-offset: 20px; /* Adjust the spacing between text and underline */
+}
 
 .avatar-wrapper img.avatar {
   width: 600px;
@@ -56,15 +49,77 @@ body {
   object-fit: cover;
 }
 .blinking-cursor {
-    animation: blink-animation 0.7s infinite;
-    color: red;
+  animation: blink-animation 0.7s infinite;
+  color: red;
+}
+
+@keyframes blink-animation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Existing CSS styles */
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .intro-avatar-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px; 
+  }
+
+    .avatar-wrapper {
+    margin-top: 20px;
+    order: 1;
+  }
+
+
+  .name-wrapper {
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .avatar-wrapper img.avatar {
+    width: 300px; /* Adjust avatar size */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .name-wrapper {
+    text-align: center;
+  }
+
+  .name-wrapper h2 {
+    margin-top: 0; /* Reset default margin */
+    margin-top: 50px; /* Apply desired margin */
+    font-size: 20px;
+    font-family: "Roboto Slab", serif;
+
   }
   
-  @keyframes blink-animation {
-    0%, 100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
+
+  .name-wrapper h1 {
+    font-size: 20px;
+    font-family: "Roboto Slab", serif;
+    display: none;
   }
+
+  .name-wrapper h3 {
+    font-size: 20px;
+    color: grey;
+    font-family: "Outfit", sans-serif;
+  }
+
+  .name-wrapper h3 span {
+    text-decoration: none; /* Add the underline */
+  }
+
+
+  /* Adjust other styles for mobile layout as needed */
+}
