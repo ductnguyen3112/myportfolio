@@ -1,0 +1,32 @@
+.story-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin:200px;
+  }
+
+
+.first-display {
+  animation: fadeIn 2s forwards; /* 2s fade-in animation */
+  opacity: 0; /* Start with 0 opacity */
+  transition: opacity 1s ease-in-out 5s; /* 1s transition for the opacity after a 5s delay */
+}
+.fade-out {
+  opacity: 0; /* Fade out to 0 opacity */
+}
+.first-display h1{
+  font-size:100px;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+

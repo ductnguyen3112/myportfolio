@@ -1,7 +1,8 @@
 import "./landing.css";
 import React from "react";
-import TypingAnimationWithCursor from "../funciton/TypingAnimationWithCursor"; // Import the TypingAnimationWithCursor component
+import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor"; // Import the TypingAnimationWithCursor component
 import Button from "@mui/material/Button";
+
 const Landing = () => {
   return (
     <div className="landing-container">
@@ -12,7 +13,7 @@ const Landing = () => {
             <span>Welcome </span> to My Portfolio
           </h3>
           <h1>Duc Thinh Nguyen</h1>
-          <h2 style={{ marginTop: "-10px" }}>
+          <h2>
             I'm{" "}
             <span>
               <TypingAnimationWithCursor
@@ -21,18 +22,7 @@ const Landing = () => {
             </span>
           </h2>
           <div className="button-container">
-            <Button
-              className="read-more"
-              variant="outlined"
-              color="primary"
-              style={{
-                borderColor: "#009BDF", // Change the border color
-                color: "#009BDF", // Change the text color
-                fontFamily: "Roboto",
-              }}
-            >
-              Read More
-            </Button>
+           
           </div>
         </div>
 

@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </li>
         </ul> */}
-        <ul className="menu">
+        {/* <ul className="menu">
           <li className="menu__item">
             <a className="menu__link" href="/">
               Home
@@ -63,7 +63,7 @@ const Footer = () => {
               Contact Me
             </a>
           </li>
-        </ul>
+        </ul> */}
         <p>&copy;Duc Thinh Nguyen | All Rights Reserved</p>
       </footer>
     </div>

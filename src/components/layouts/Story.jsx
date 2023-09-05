@@ -1,20 +1,18 @@
 import React from 'react'
 import Footer from '../Footer'
 import Nav from '../Nav'
-import Landing from '../Pages/Landing';
+import MyStory from '../Pages/MyStory';
 import SwipeablePages from '../functions/SwipeablePages';
 
-const Layout = () => {
+const Story = () => {
   return (
     <>
     <Nav/>
     {/* <SwipeablePages/> */}
-    <Landing/>
+    <MyStory/>
     <Footer/>
-
-
-</>
+    </>
   )
 }
 
-export default Layout
+export default Story
