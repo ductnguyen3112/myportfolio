@@ -7,6 +7,16 @@
   }
 
 
+  .second-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+.story-image {
+  margin:100px;
+}
+
 .first-display {
   animation: fadeIn 2s forwards; /* 2s fade-in animation */
   opacity: 0; /* Start with 0 opacity */

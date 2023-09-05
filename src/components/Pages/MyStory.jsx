@@ -12,7 +12,7 @@ const MyStory = () => {
       }, 5000);
     }
   }, [showPage]);
-  
+
   return (
     <div className="story-container">
       {!showPage ? (
@@ -23,8 +23,23 @@ const MyStory = () => {
       ) : (
         // Show second display after showPage turns to true
         <div className="second-display">
-          This is the second display content after 5 seconds.
+          <div className='story-image'>
+            Story Image
+
+          </div>
+          <div className='story-text'>
+            <h1>Story</h1>
+            <h3>Lorem Ipsum</h3>
+          </div>
+
+
+
+
+
         </div>
+
+
+
       )}
     </div>
   );
