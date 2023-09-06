@@ -1,0 +1,70 @@
+.skill-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 100px;
+}
+
+.skill-wrap p {
+  font-size: 15px;
+}
+
+.skill-wrap p1 {
+  color: var(--main-body-color);
+  font-size: 15px;
+}
+.column-paper {
+  /* other styles */
+  min-height: 500px; /* Adjust this value according to your needs */
+}
+.resume-containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(236, 245, 254, 0.767);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.684); /* Customize shadow values as needed */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.column-paper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.column-container {
+  text-align: center;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.icon-wrapper {
+  display: inline-flex; /* Ensures the circle doesn't take up full width */
+  justify-content: center; /* Horizontally centers the icon within the circle */
+  align-items: center; /* Vertically centers the icon within the circle */
+  width: 100px; /* Set the width and height to create a circle */
+  height: 100px;
+  border-radius: 50%; /* Makes the element a circle */
+  background-color: var(--main-body-color);
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .column-paper {
+    /* other styles */
+    min-width: 80vw; /* Use viewport width units to ensure 80% width */
+    margin: auto; /* Centers the box */
+  }
+
+  .skill-wrap {
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove the padding on mobile for better responsiveness */
+    margin: 20px; /* Adjust margin as needed */
+  }
+}

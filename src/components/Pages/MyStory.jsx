@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./story.css";
-import transition from "../Transition"; 
-import Lottie from "react-lottie";
+import transition from "../Transition";
+import lottie from "lottie-web"; 
+
 import animationData from "../lotties/storylottie.json";
 const MyStory = () => {
   const [showPage, setShowPage] = useState(false);
+  const animationContainerRef = useRef(null); // Create a ref for the animation container
+
 
   useEffect(() => {
     if (!showPage) {
@@ -15,14 +18,22 @@ const MyStory = () => {
     }
   }, [showPage]);
 
-  const defaultOptions = {
-    loop: true, // Set to true if you want the animation to loop
-    autoplay: true, // Set to true if you want the animation to play automatically
-    animationData: animationData, // Animation JSON data
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
+  useEffect(() => {
+    if (showPage) {
+      // Initialize Lottie animation when showPage is true
+      const animation = lottie.loadAnimation({
+        container: animationContainerRef.current,
+        animationData: animationData,
+        loop: true,
+        autoplay: true,
+      });
+      return () => {
+        // Cleanup when the component unmounts
+        animation.destroy();
+      };
+    }
+  }, [showPage]);
 
   return (
     <div className="story-container">
@@ -36,8 +47,8 @@ const MyStory = () => {
       ) : (
         // Show second display after showPage turns to true
         <div className="second-display">
-          <div className="story-image">
-            <Lottie options={defaultOptions} />
+        <div className="story-image" ref={animationContainerRef}>
+            {/* Lottie animation will be rendered here */}
           </div>
           <div className="story-text">
             <h1>About Me</h1>
@@ -53,8 +64,8 @@ const MyStory = () => {
               when the COVID-19 pandemic ushered in a time of global
               introspection, I discovered a burgeoning passion for software
               development. Today, my accomplishments in this domain include
-             <span style={{fontWeight: "bold"}}> developing software, creating websites, and even initiating a
-              freelance marketing agency</span>.
+              <span style={{ fontWeight: "bold" }}> developing software, creating websites, and even initiating a
+                freelance marketing agency</span>.
             </p>
 
             <p>

@@ -1,7 +1,6 @@
 import "./landing.css";
 import React from "react";
-import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor"; // Import the TypingAnimationWithCursor component
-import Button from "@mui/material/Button";
+import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor"; 
 import transition from "../Transition"; 
 
 const Landing = () => {
