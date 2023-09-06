@@ -10,18 +10,19 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const pages = ["Home", "My Story", "Resume", "Education", "Contact Me"];
 
 const Nav = () => {
-    const theme = createTheme({
-        palette: {
-          primary: {
-            main: "#5c5c5c1d",
-          },
-        },
-      });
-      
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#5c5c5c1d",
+      },
+    },
+  });
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -40,8 +41,8 @@ const Nav = () => {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
+              component={Link}
+              to="/"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -86,7 +87,15 @@ const Nav = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Link
+                      to={
+                        page === "Home"
+                          ? "/"
+                          : `/${page.replace(" ", "").toLowerCase()}`
+                      }
+                    >
+                      <Typography textAlign="center">{page}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
@@ -94,8 +103,8 @@ const Nav = () => {
             <Typography
               variant="h5"
               noWrap
-              component="a"
-              href="/"
+              component={Link}
+              to="/"
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
@@ -120,6 +129,12 @@ const Nav = () => {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
+                  component={Link}
+                  to={
+                    page === "Home"
+                      ? "/"
+                      : `/${page.replace(" ", "").toLowerCase()}`
+                  }
                   sx={{
                     my: 2,
                     color: "var(--nav-font-color)",

@@ -1,20 +1,26 @@
 .story-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin:200px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 100px;
+}
+
+.second-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(236, 245, 254, 0.767);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.684); /* Customize shadow values as needed */
+  padding: 20px;
+  border-radius: 8px;
+}
 
 
-  .second-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-  }
 .story-image {
-  margin:100px;
+  min-width: 400px;
+  margin-right: 50px;
 }
 
 .first-display {
@@ -22,12 +28,14 @@
   opacity: 0; /* Start with 0 opacity */
   transition: opacity 1s ease-in-out 5s; /* 1s transition for the opacity after a 5s delay */
 }
+
 .fade-out {
   opacity: 0; /* Fade out to 0 opacity */
 }
-.first-display h1{
-  font-size:100px;
 
+.first-display h1 {
+  margin-top: 200px;
+  font-size: 100px;
 }
 
 @keyframes fadeIn {
@@ -39,4 +47,43 @@
   }
 }
 
+/* Mobile adaptive styles */
+@media (max-width: 768px) {
+  .story-container {
+    flex-direction: column; /* Change to column layout for mobile */
+    margin: 50px 10px; /* Reduce margins */
+  }
+  
+  .second-display {
+    flex-direction: column; /* Stack content vertically for mobile */
+    padding: 10px; /* Reduce padding */
+  }
 
+  .story-image {
+    
+    min-width: auto; /* Allow image to resize for mobile */
+    width: 50%; /* Set width to 100% */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  
+  .first-display h1 {
+    font-size: 50px; /* Reduce font size for mobile */
+  }
+
+  .footer {
+    display:none;
+  }
+
+  .story-container p{
+    font-size: 15px;
+  }
+
+  .story-text span{
+    font-weight: 500;
+  }
+
+
+
+  
+}

@@ -1,19 +1,24 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import React from "react";
-import HomePage from "./components/layouts/Layout";
-import Story from "./components/layouts/Story";
+import Home from "./components/Pages/Landing";
+import Nav from "./components/Nav";
+import MyStory from "./components/Pages/MyStory";
+import Footer from "./components/Footer";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <>
+      <Nav />
+      <AnimatePresence mode= "wait">
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Home />} />
+        <Route path="/mystory" element={<MyStory />} />
       </Routes>
-
-      <Routes>
-        <Route path="/story" element={<Story />} />
-      </Routes>
-    </BrowserRouter>
+      </AnimatePresence>
+      <Footer />
+    </>
   );
 }
 

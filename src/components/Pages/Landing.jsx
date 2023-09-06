@@ -2,6 +2,7 @@ import "./landing.css";
 import React from "react";
 import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor"; // Import the TypingAnimationWithCursor component
 import Button from "@mui/material/Button";
+import transition from "../Transition"; 
 
 const Landing = () => {
   return (
@@ -38,4 +39,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default transition(Landing);
