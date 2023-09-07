@@ -151,7 +151,7 @@ const Resume = () => {
 
                       I prioritize clean content structure, simple design patterns, and thoughtful interactions.
                     </p>
-                    <br></br>
+          
                   </div>
                 </Grid>
                 <Grid item>
