@@ -26,7 +26,7 @@ const TypingAnimationWithCursor = ({ words }) => {
   }, [index, text, words]);
 
   return (
-    <span style={{ color: "var(--main-body-color)" }}>
+    <span style={{ color: "white" }}>
       {text}
       {showCursor && <span className="blinking-cursor">|</span>}
     </span>

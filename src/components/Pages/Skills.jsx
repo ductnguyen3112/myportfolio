@@ -1,11 +1,11 @@
 import React from 'react'
 import { Grid, Paper } from "@mui/material";
-import './resume.css'
+import './skill.css'
 import TerminalIcon from '@mui/icons-material/Terminal';
 import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import transition from "../Transition";
-const Resume = () => {
+const Skills = () => {
   return (
     <div className='skill-wrap'>
       <div className='resume-container'>
@@ -190,4 +190,4 @@ const Resume = () => {
   )
 }
 
-export default transition(Resume);
+export default transition(Skills);

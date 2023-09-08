@@ -5,8 +5,8 @@ import Nav from "./components/Nav";
 import MyStory from "./components/Pages/MyStory";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
-import Resume from "./components/Pages/Resume";
 import Portfolios from "./components/Pages/Portfolios";
+import Skills from "./components/Pages/Skills";
 
 function App() {
   const location = useLocation();
@@ -17,11 +17,11 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/mystory" element={<MyStory />} />
-          <Route path="/skill" element={<Resume />} />
+          <Route path="/skill" element={<Skills />} />
           <Route path="/portfolios" element={<Portfolios />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

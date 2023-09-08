@@ -1,18 +1,11 @@
-body {
-  background-blend-mode: overlay;
-  background-image: url("../images/bg-02-free-img.png"); /* Replace with the path to your image */
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: right top;
-  margin: 0;
-}
+
 
 .intro-avatar-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .name-wrapper {
@@ -31,7 +24,7 @@ body {
 
 .name-wrapper h3 {
   font-size: 20px;
-  color: grey;
+  color: rgb(255, 255, 255);
   font-family: "Outfit", sans-serif;
 }
 

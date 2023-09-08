@@ -25,6 +25,7 @@ const Portfolios = () => {
         slidesToShow: 3,
         centerMode: true,
         centerPadding: '0', // Adjust this value if needed
+        beforeChange: (current, next) => setCenterIndex(next),
         responsive: [
             {
                 breakpoint: 768, // Mobile breakpoint

@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
-
+import logo from "../components/images/logo.png";
 const pages = ["Home", "My Story", "Skill", "Portfolios", "Contact Me"];
 
 const Nav = () => {
@@ -38,25 +38,22 @@ const Nav = () => {
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component={Link}
-              to="/"
+            {/* how to add logo here */}
+
+            <img
+              className="logo"
+              src={logo}
+              alt="Your Logo Name"
+              style={{ height: "35px", marginTop: "5px" }}
+            />
+
+            <Box
               sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "black",
-                textDecoration: "none",
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+                justifyContent: "flex-end",
               }}
             >
-              Duc Thinh Nguyen
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -65,7 +62,7 @@ const Nav = () => {
                 onClick={handleOpenNavMenu}
                 color="black"
               >
-                <MenuIcon />
+                <MenuIcon sx={{ color: "white" }} />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -100,24 +97,7 @@ const Nav = () => {
                 ))}
               </Menu>
             </Box>
-            <Typography
-              variant="h5"
-              noWrap
-              component={Link}
-              to="/"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "black",
-                textDecoration: "none",
-              }}
-            >
-              Duc Thinh Nguyen
-            </Typography>
+
             <Box
               sx={{
                 flexGrow: 1,

@@ -27,11 +27,7 @@ const Landing = () => {
         </div>
 
         <div className="avatar-wrapper">
-          <img
-            src="https://scontent.fyhu2-1.fna.fbcdn.net/v/t1.6435-9/64913395_10213224030988286_6547385640810446848_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFuPCr2bBzFw15sJizNeJqLUk0_uaKUAvBSTT-5opQC8BrQqmQyZu-cNBpvEhvaz9k&_nc_ohc=0OGP4OITejAAX-VMF51&_nc_ht=scontent.fyhu2-1.fna&oh=00_AfDqZzP4pR2HMWcy048JHfL8SadRyG-ZsQCJZqMDEizG3w&oe=651B0D27"
-            alt="User Avatar"
-            className="avatar"
-          />
+
         </div>
       </div>
     </div>
