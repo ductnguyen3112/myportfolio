@@ -87,7 +87,8 @@ function Contact() {
             component={Paper}
             elevation={6}
             square
-            sx={{ borderRadius: "15px" }}
+            sx={{ borderRadius: "15px",  }}
+            
           >
             <Box
               sx={{
@@ -96,6 +97,7 @@ function Contact() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+               
               }}
             >
               <Avatar sx={{ m: 2, bgcolor: "#222152" }}>

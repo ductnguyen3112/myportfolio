@@ -61,6 +61,27 @@ const StickyNav = () => {
 
     navigate(path);
   };
+  const navigateToPreviousPage = () => {
+    if (activePageIndex > 0) {
+      const newIndex = activePageIndex - 1;
+      const path = pages[newIndex] === "Home"
+        ? "/"
+        : `/${pages[newIndex].replace(" ", "").toLowerCase()}`;
+      navigate(path);
+    }
+  };
+
+  const navigateToNextPage = () => {
+    if (activePageIndex < pages.length - 1) {
+      const newIndex = activePageIndex + 1;
+      const path = pages[newIndex] === "Home"
+        ? "/"
+        : `/${pages[newIndex].replace(" ", "").toLowerCase()}`;
+      navigate(path);
+    }
+  };
+
+
 
   return (
     <nav
@@ -68,12 +89,12 @@ const StickyNav = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <a>
-        <KeyboardDoubleArrowLeftIcon sx={{marginTop:'3px'}}/>
+      <a onClick={navigateToPreviousPage}>
+        <KeyboardDoubleArrowLeftIcon sx={{ marginTop: '3px' }} />
       </a>
       <a>{pages[activePageIndex]}</a>
-      <a>
-        <KeyboardDoubleArrowRightIcon  sx={{marginTop:'3px'}} />
+      <a onClick={navigateToNextPage}>
+        <KeyboardDoubleArrowRightIcon sx={{ marginTop: '3px' }} />
       </a>
     </nav>
   );

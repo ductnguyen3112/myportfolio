@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./story.css";
+import "./css/story.css";
 import transition from "../Transition";
 import lottie from "lottie-web";
 

@@ -13,20 +13,24 @@ import Contact from "./components/Pages/Contact";
 function App() {
   const location = useLocation();
   return (
-    <>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Nav />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/mystory" element={<MyStory />} />
-          <Route path="/skill" element={<Skills />} />
-          <Route path="/portfolios" element={<Portfolios />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <StickyNav/>
-      </AnimatePresence>
-      <Footer/>
-    </>
+      <div style={{ flex: 1}}>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Home />} />
+            <Route path="/mystory" element={<MyStory />} />
+            <Route path="/skill" element={<Skills />} />
+            <Route path="/portfolios" element={<Portfolios />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <StickyNav />
+        </AnimatePresence>
+      </div>
+      <Footer />
+    </div>
   );
 }
 

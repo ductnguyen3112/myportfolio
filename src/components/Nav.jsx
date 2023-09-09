@@ -79,20 +79,33 @@ const Nav = () => {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: "block", md: "none" },
+                  "& .MuiPaper-root": {   // Targeting the paper root (dropdown portion)
+                    backgroundColor: 'hsla(210, 2%, 16%, 0.341)',
+                    backdropFilter: 'blur(15px)',
+                  },
+                  "& .MuiMenuItem-root": {
+                    width: { xs: "100vw", md: "auto" },
+                  },
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      to={
-                        page === "Home"
-                          ? "/"
-                          : `/${page.replace(" ", "").toLowerCase()}`
-                      }
-                    >
-                      <Typography textAlign="center">{page}</Typography>
-                    </Link>
+                  <MenuItem
+                    className="menu-item-root"
+                    onClick={handleCloseNavMenu}
+                  >
+                    <Typography className="typography-style">
+                      <Link
+                        className="link-style"
+                        key={page}
+                        to={
+                          page === "Home"
+                            ? "/"
+                            : `/${page.replace(" ", "").toLowerCase()}`
+                        }
+                      >
+                        {page}
+                      </Link>
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>

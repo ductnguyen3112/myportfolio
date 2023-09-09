@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Paper } from "@mui/material";
-import './skill.css'
+import './css/skill.css'
 import TerminalIcon from '@mui/icons-material/Terminal';
 import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';

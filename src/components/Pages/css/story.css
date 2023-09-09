@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.192);
+  background: hsla(204, 2%, 44%, 0.341);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.684); /* Customize shadow values as needed */
   padding: 20px;
   backdrop-filter: blur(15px);
@@ -89,6 +89,7 @@
   .second-display {
     flex-direction: column; /* Stack content vertically for mobile */
     padding: 10px; /* Reduce padding */
+    max-width: 95%;
     margin:5px;
     text-align: center;
     
