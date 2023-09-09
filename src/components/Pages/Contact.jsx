@@ -16,24 +16,36 @@ const defaultTheme = createTheme();
 
 function Contact() {
   const [Notification, setNotification] = useState("");
- 
+
 
   const sendEmail = (event) => {
     event.preventDefault();
+    const email = event.currentTarget.email.value.trim();
+    const fullName = event.currentTarget.fullname.value.trim();
     const message = event.currentTarget.message.value.trim();
 
-    // Check if message is empty
-    if (!message) {
-        setNotification('Message is empty. Please write something before sending.');
-        return; // Exit the function
+    // Check if any field is an empty string
+    if (email === "") {
+      setNotification('Email field is empty. Please provide an email.');
+      return; // Exit the function
+    }
+
+    if (fullName === "") {
+      setNotification('Full Name is empty. Please provide your full name.');
+      return; // Exit the function
+    }
+
+    if (message === "") {
+      setNotification('Message is empty. Please write something before sending.');
+      return; // Exit the function
     }
     emailjs.sendForm('service_pmu7nai', 'template_h7lt0tk', event.currentTarget, 'PD8MtmLy_3yI1cVd8')
       .then((result) => {
-          console.log(result.text);
-          setNotification('Message sent successfully');
+        console.log(result.text);
+        setNotification('Message sent successfully');
       }, (error) => {
-          console.log(error.text);
-          setNotification('Failed to send message. Please try again later.');
+        console.log(error.text);
+        setNotification('Failed to send message. Please try again later.');
       });
   };
 
@@ -148,9 +160,9 @@ function Contact() {
                   Submit
                 </Button>
               </Box>
-              <Typography sx={{fontSize:"15px"}}>
-              {Notification}
-            </Typography>
+              <Typography sx={{ fontSize: "15px" }}>
+                {Notification}
+              </Typography>
             </Box>
           </Grid>
         </Grid>
