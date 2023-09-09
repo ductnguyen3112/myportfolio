@@ -1,7 +1,7 @@
 import "./landing.css";
 import React from "react";
-import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor"; 
-import transition from "../Transition"; 
+import TypingAnimationWithCursor from "../functions/TypingAnimationWithCursor";
+import transition from "../Transition";
 
 const Landing = () => {
   return (
@@ -21,13 +21,6 @@ const Landing = () => {
               />
             </span>
           </h2>
-          <div className="button-container">
-           
-          </div>
-        </div>
-
-        <div className="avatar-wrapper">
-
         </div>
       </div>
     </div>

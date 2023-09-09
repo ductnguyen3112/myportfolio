@@ -14,6 +14,7 @@
   background-color: rgba(255, 255, 255, 0.192);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.684); /* Customize shadow values as needed */
   padding: 20px;
+  backdrop-filter: blur(15px);
   border-radius: 8px;
 }
 
@@ -81,12 +82,16 @@
 @media (max-width: 768px) {
   .story-container {
     flex-direction: column; /* Change to column layout for mobile */
-    margin: 50px 10px; /* Reduce margins */
+    margin: 50px 10px 100px 10px; /* Reduce margins */
+   
   }
   
   .second-display {
     flex-direction: column; /* Stack content vertically for mobile */
     padding: 10px; /* Reduce padding */
+    margin:5px;
+    text-align: center;
+    
   }
 
   .story-image {
@@ -101,9 +106,6 @@
     font-size: 50px; /* Reduce font size for mobile */
   }
 
-  .footer {
-    display:none;
-  }
 
   .story-container p{
     font-size: 15px;

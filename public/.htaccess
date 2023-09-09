@@ -1,0 +1,9 @@
+# Turn on rewrites.
+RewriteEngine On
+
+# Don't apply to URLs that go to existing files or folders.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.html so the React app can handle routing.
+RewriteRule ^ index.html [L]

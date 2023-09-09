@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import logo from "../components/images/logo.png";
-const pages = ["Home", "My Story", "Skill", "Portfolios", "Contact Me"];
+const pages = ["Home", "My Story", "Skill", "Portfolios", "Contact"];
 
 const Nav = () => {
   const theme = createTheme({

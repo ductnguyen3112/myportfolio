@@ -32,7 +32,7 @@ const Skills = () => {
                 <Grid item>
                   <div className="center-content">
                     <p> I relish creating web and app experiences from the ground up</p>
-             
+                    <br></br>
                   </div>
                 </Grid>
                 <Grid item>
@@ -45,6 +45,7 @@ const Skills = () => {
                 <Grid item sx={{ marginTop: '-20px' }}>
                   <div className="center-content">
                     <p> HTML, CSS, JavaScript, Python, C#, Lua, PHP</p>
+                    <br></br>
                   </div>
                 </Grid>
 
@@ -53,7 +54,7 @@ const Skills = () => {
                   <div className="center-content">
                     <p1> Dev Tools:</p1>
 
-
+                    <br></br>
                   </div>
                 </Grid>
 

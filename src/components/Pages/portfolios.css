@@ -37,6 +37,15 @@
     transform: perspective(1000px) rotateY(50deg);
 }
 
+.slick-dots li button:before {
+    color: white; /* e.g., #ff0000 for red */
+}
+
+.slick-dots li.slick-active button:before {
+    color: grey; /* e.g., #00ff00 for green */
+}
+
+
 @media (max-width: 768px) {
     .portfolio-container {
         max-width: 90%;
