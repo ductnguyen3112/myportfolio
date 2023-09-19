@@ -3,19 +3,25 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin: 100px;
-
+  margin-top: 100px;
 }
 
 .second-display {
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.192);
+  background: hsla(204, 2%, 44%, 0.341);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.684); /* Customize shadow values as needed */
-  padding: 20px;
   backdrop-filter: blur(15px);
   border-radius: 8px;
+  max-width: 80%;
+
+
+
+}
+.story-text{
+  margin:10px;
 }
 
 .name-story {
@@ -24,6 +30,7 @@
   border-radius: 10px;
   width: fit-content;
   padding: 0 10px;  /* No vertical padding, retained horizontal padding */
+  margin-bottom: 20px;
 }
 .name-story h3 {
 
@@ -87,8 +94,10 @@
   }
   
   .second-display {
+    margin-top: -50px !important;
     flex-direction: column; /* Stack content vertically for mobile */
     padding: 10px; /* Reduce padding */
+    max-width: 95%;
     margin:5px;
     text-align: center;
     

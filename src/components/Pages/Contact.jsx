@@ -56,7 +56,12 @@ function Contact() {
         alignItems="center"
         justifyContent="center"
         sx={{
-          marginTop: "100px",
+          marginTop: {
+            xs: "20px",
+            sm: "40px",
+            md: "50px",
+
+          },
           marginLeft: {
             xs: "20px",
             sm: "40px",
@@ -99,7 +104,8 @@ function Contact() {
             component={Paper}
             elevation={6}
             square
-            sx={{ borderRadius: "15px" }}
+            sx={{ borderRadius: "15px",  }}
+            
           >
             <Box
               sx={{
@@ -108,6 +114,7 @@ function Contact() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+               
               }}
             >
               <Avatar sx={{ m: 2, bgcolor: "#222152" }}>

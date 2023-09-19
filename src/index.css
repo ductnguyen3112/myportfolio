@@ -16,7 +16,7 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f0f0 !important; /* Change the background color here */
+/* Change the background color here */
   color: var(--main-color);
   background-image: url("./components/images/bg-02-free-img.png");
   background-repeat: no-repeat; /* Prevents the background from repeating */
@@ -25,24 +25,25 @@ body {
 
   /* Additional styles for the body */
 }
-.slide-in {
+.slide-in, .slide-out {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 9999; /* this ensures the element is on top of all other layers */
+}
+
+.slide-in {
   background: var(--transition-color);
   transform-origin: right;
 }
+
 .slide-out {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background:  var(--transition-color);
+  background: var(--transition-color);
   transform-origin: left;
 }
+
 
 
 code {
@@ -52,16 +53,6 @@ code {
 
 
 
-
-.footer a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 5px; /* Optional for spacing */
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 768px) {
   body {
@@ -76,6 +67,25 @@ code {
     padding: 10px 25px; /* reduced from 20px 50px */
   }
 
+  
+  .typography-style {
+    width: 92%;
+    text-align: center;
+    display: block;
+  }
+  
+  .link-style {
+    text-decoration: none;
+    color: white;
+  }
+
+  .link-style:hover {
+    color: #F7A4D7; 
+  }
+
+  .menu-item-root, .link-style {
+    transition: all 0.3s ease;
+  }
 
 }
 

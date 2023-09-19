@@ -1,24 +1,14 @@
 
 
-.intro-avatar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-top: 100px;
-}
-
-.name-wrapper {
-  margin: 50px;
-}
-
 .name-wrapper h2 {
+
   font-size: 40px;
   font-family: "Roboto Slab", serif;
 }
 
 .name-wrapper h1 {
   font-size: 70px;
+
   font-family: "Roboto Slab", serif;
 }
 
@@ -62,7 +52,7 @@
   .intro-avatar-container {
     flex-direction: column;
     align-items: center;
-    margin-top: 0px; 
+    margin-top: 80px; 
   }
 
     .avatar-wrapper {
@@ -98,19 +88,15 @@
   
 
   .name-wrapper h1 {
-    font-size: 20px;
+    font-size: 50px;
     font-family: "Roboto Slab", serif;
-    display: none;
+   
   }
 
   .name-wrapper h3 {
     font-size: 20px;
     color: grey;
     font-family: "Outfit", sans-serif;
-  }
-
-  .name-wrapper h3 span {
-    text-decoration: none; /* Add the underline */
   }
 
 

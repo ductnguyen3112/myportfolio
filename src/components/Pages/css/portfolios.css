@@ -1,0 +1,74 @@
+.portfolio-container {
+  max-width: 1000px;
+  margin: 10px auto 0px;
+  height: 70vh;
+  overflow: visible; /* Ensure parts of adjacent slides are visible */
+}
+
+.portfolio-container h1 {
+  text-align: center;
+  transform: translateY(60px);
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.slick-slide {
+  height: 70vh;
+  transform: scale(0.8);
+  transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 100px;
+  will-change: transform, scale;
+}
+
+.slider-slide.center-slide {
+  transform: scale(1.2);
+  z-index: 2;
+  transition: transform 0.5s ease-in-out, scale 0.5s ease-in-out;
+}
+
+.slider-slide.left-of-center .slider-image {
+  transform: perspective(1000px) rotateY(-50deg);
+}
+
+.slider-slide.right-of-center .slider-image {
+  transform: perspective(1000px) rotateY(50deg);
+}
+
+.slick-dots li button:before {
+  transform: translateY(-150px);
+  color: white; /* e.g., #ff0000 for red */
+}
+
+.slick-dots li.slick-active button:before {
+  color: grey; /* e.g., #00ff00 for green */
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    margin-top: -50px;
+    max-width: 85%;
+    height: 80vh;
+  }
+
+  .slider-slide {
+    height: 80vh;
+  }
+
+  .portfolio-container h1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: -100px;
+  }
+  .slick-dots {
+    display: none;
+  }
+}

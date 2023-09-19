@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Paper } from "@mui/material";
-import './skill.css'
+import './css/skill.css'
 import TerminalIcon from '@mui/icons-material/Terminal';
 import ViewCarouselIcon from '@mui/icons-material/ViewCarousel';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
@@ -26,35 +26,33 @@ const Skills = () => {
                 <Grid item>
                   <div className="center-content">
                     <h2>Developer</h2>
+                 
                   </div>
                 </Grid>
                 {/* Description */}
                 <Grid item>
                   <div className="center-content">
                     <p> I relish creating web and app experiences from the ground up</p>
-                    <br></br>
+                    <br/>
                   </div>
                 </Grid>
                 <Grid item>
                   <div className="center-content">
-                    <p1> Languages I speak:</p1>
-
+                    <h4> Languages I speak:</h4>
                   </div>
                 </Grid>
 
                 <Grid item sx={{ marginTop: '-20px' }}>
                   <div className="center-content">
                     <p> HTML, CSS, JavaScript, Python, C#, Lua, PHP</p>
-                    <br></br>
                   </div>
                 </Grid>
 
 
                 <Grid item>
                   <div className="center-content">
-                    <p1> Dev Tools:</p1>
+                    <h4> Dev Tools:</h4>
 
-                    <br></br>
                   </div>
                 </Grid>
 
@@ -97,7 +95,7 @@ const Skills = () => {
                 </Grid>
                 <Grid item>
                   <div className="center-content">
-                    <p1>Experience in Web Design:</p1>
+                    <h4>Experience in Web Design:</h4>
 
                   </div>
                 </Grid>
@@ -111,7 +109,7 @@ const Skills = () => {
 
                 <Grid item>
                   <div className="center-content">
-                    <p1> Dev Tools:</p1>
+                    <h4> Dev Tools:</h4>
 
                   </div>
                 </Grid>
@@ -152,12 +150,12 @@ const Skills = () => {
 
                       I prioritize clean content structure, simple design patterns, and thoughtful interactions.
                     </p>
-          
+
                   </div>
                 </Grid>
                 <Grid item>
                   <div className="center-content">
-                    <p1>Experience in Graphic Design:</p1>
+                    <h4>Experience in Graphic Design:</h4>
 
                   </div>
                 </Grid>
@@ -171,7 +169,7 @@ const Skills = () => {
 
                 <Grid item>
                   <div className="center-content">
-                    <p1> Design Tools:</p1>
+                    <h4> Design Tools:</h4>
 
                   </div>
                 </Grid>

@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./components/Pages/Landing";
 import Nav from "./components/Nav";
 import MyStory from "./components/Pages/MyStory";
@@ -9,24 +9,34 @@ import Portfolios from "./components/Pages/Portfolios";
 import Skills from "./components/Pages/Skills";
 import StickyNav from "./components/functions/StickyNav";
 import Contact from "./components/Pages/Contact";
+import { trackPage } from './components/functions/trackPage';
 
 function App() {
   const location = useLocation();
+  
+  useEffect(() => {
+    trackPage(location.pathname); // Use location from useLocation() instead of window.location.pathname
+
+  }, [location.pathname]);
   return (
-    <>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Nav />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/mystory" element={<MyStory />} />
-          <Route path="/skill" element={<Skills />} />
-          <Route path="/portfolios" element={<Portfolios />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <StickyNav/>
-      </AnimatePresence>
-      <Footer/>
-    </>
+      <div style={{ flex: 1}}>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Home />} />
+            <Route path="/mystory" element={<MyStory />} />
+            <Route path="/skill" element={<Skills />} />
+            <Route path="/portfolios" element={<Portfolios />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <StickyNav />
+        </AnimatePresence>
+      </div>
+      <Footer />
+    </div>
   );
 }
 
